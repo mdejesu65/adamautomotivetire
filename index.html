@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adam Automotive & Tire Shop LLC - Fast, Affordable Tire Service in Jacksonville, FL">
+  <title>Adam Automotive & Tire Shop LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top, #000000 20%, #111111 80%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #ffdd00, #ff3b3b);
+      color: #111;
+      text-align: center;
+      padding: 60px 20px;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+      animation: glowHeader 6s infinite alternate;
+    }
+    @keyframes glowHeader {
+      from { box-shadow: 0 0 20px #ffdd00; }
+      to { box-shadow: 0 0 40px #ff3b3b; }
+    }
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      margin: 0;
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .btn {
+      background: #ff3b3b;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
+    }
+    .btn:hover {
+      background: #ffdd00;
+      color: #111;
+      box-shadow: 0 0 15px #ff3b3b;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,59,59, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(255,59,59, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,59,59, 0); }
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 30px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .service.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff3b3b;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 30px;
+      color: #999;
+      font-size: 0.9rem;
+      animation: fadeIn 3s ease;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff3b3b;
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ff3b3b;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
+    }
+    .floating-btn:hover {
+      background: #ffdd00;
+      color: #111;
+      box-shadow: 0 0 25px #ffdd00;
+    }
+    /* Appointment Form */
+    form {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      max-width: 500px;
+      margin: 30px auto;
+    }
+    form input, form select, form button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form input, form select {
+      background: #222;
+      color: #fff;
+    }
+    form button {
+      background: #ff3b3b;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #ffdd00;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adam Automotive & Tire Shop LLC</h1>
+    <p>Fast, Affordable Tire Service & Auto Repair in Jacksonville, FL</p>
+    <a href="tel:+19041234567" class="btn">📞 Call Now</a>
+    <a href="https://maps.google.com/?q=2009+Lane+Ave+Jacksonville+FL" class="btn">🗺️ Get Directions</a>
+  </header>
+
+  <section>
+    <h2>🚗 Our Services</h2>
+    <div class="services">
+      <div class="service">🛞 New & Used Tires</div>
+      <div class="service">⛽ 10-Minute Oil Change</div>
+      <div class="service">🛠️ Brake & Rotor Repair</div>
+      <div class="service">🎯 Wheel Alignment</div>
+      <div class="service">⚙️ Tune-Ups & CV Axles</div>
+      <div class="service">🔩 Wheel Bearing Service</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📅 Book an Appointment</h2>
+    <form id="appointment-form">
+      <input type="text" id="name" name="name" placeholder="Full Name" required />
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+      <select id="service" name="service" required>
+        <option value="">Select Service</option>
+        <option value="Tire Replacement">Tire Replacement</option>
+        <option value="Oil Change">Oil Change</option>
+        <option value="Brake Repair">Brake Repair</option>
+        <option value="Wheel Alignment">Wheel Alignment</option>
+      </select>
+      <input type="date" id="preferredDate" name="preferredDate" required />
+      <button type="submit">Book Appointment</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>📍 Visit Us</h2>
+    <p>2009 Lane Ave, Jacksonville, FL 32210</p>
+    <p>Mon–Sat: 8 AM – 6 PM | Sunday: Closed</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.055449509926!2d-81.751!3d30.310!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDE4JzM2LjAiTiA4McKwNDUnMDMuNiJX!5e0!3m2!1sen!2sus!4v0000000000000"></iframe>
+  </section>
+
+  <a href="tel:+19041234567" class="floating-btn">📞 Call Now</a>
+
+  <footer>
+    © 2025 Adam Automotive & Tire Shop LLC | Built by GrowEasy Digital LLC
+  </footer>
+
+  <script>
+    // Scroll animation for services
+    const services = document.querySelectorAll('.service');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      services.forEach(service => {
+        const top = service.getBoundingClientRect().top;
+        if (top < triggerBottom) service.classList.add('visible');
+      });
+    });
+
+    // Appointment form submission
+    const form = document.getElementById("appointment-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = {
+        name: form.name.value,
+        phone: form.phone.value,
+        service: form.service.value,
+        preferredDate: form.preferredDate.value
+      };
+
+      const res = await fetch("/api/appointment", {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
+
+      const reply = await res.json();
+      alert(reply.reply);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
